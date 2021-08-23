@@ -40,15 +40,15 @@ usage()
 ${progDir}/stop-swarm --all
 
 
-${sudo} docker image rm -f "${slPytImage}"
-${sudo} docker image rm -f "${slTFImage}"
-${sudo} docker image rm -f "${snImage}"
-${sudo} docker image rm -f "${swciImage}"
-${sudo} docker image rm -f "${spireImage}"
-${sudo} docker image rm -f "${aplsImage}"
+# ${sudo} docker image rm -f "${slPytImage}"
+# ${sudo} docker image rm -f "${slTFImage}"
+# ${sudo} docker image rm -f "${snImage}"
+# ${sudo} docker image rm -f "${swciImage}"
+# ${sudo} docker image rm -f "${spireImage}"
+# ${sudo} docker image rm -f "${aplsImage}"
 
 
-rm -rf                              \
-    "${swarmInstallDir}/docs"       \
-    "${swarmInstallDir}/examples"   \
-    "${swarmInstallDir}/scripts"
+# rm -rf                              \
+#     "${swarmInstallDir}/docs"       \
+#     "${swarmInstallDir}/examples"   \
+#     "${swarmInstallDir}/scripts"

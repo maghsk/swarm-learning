@@ -150,6 +150,10 @@ postprocessComponentOpts()
     fi
 
     [[ -n "${gpu}" ]] && envvar+=(-e "NVIDIA_VISIBLE_DEVICES=${gpu}")
+    [[ -n "${gpu}" ]] && envvar+=(-e "CUDA_VISIBLE_DEVICES=${gpu}")
+    [[ -n "${gpu}" ]] && envvar+=(--gpus all)
+    [[ -n "${gpu}" ]] && envvar+=(--privileged=true)
+    [[ -n "${gpu}" ]] && envvar+=(--cap-add=CAP_SYS_ADMIN)
     [[ -z "${gpu}" || "${slPlatform,,}" == "pyt" ]] && envvar+=(-e "NVIDIA_VISIBLE_DEVICES=")
 
     if [[ -z "${snIp}" ]]
