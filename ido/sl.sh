@@ -1,12 +1,12 @@
-docker container rm sl-$SLNUM ; bash ./swarm-learning/bin/run-sl        \
+docker container rm sl-$SLNUM
+bash ./swarm-learning/bin/run-sl        \
     --name=sl-$SLNUM                         \
     --network sl-net             \
     --sl-platform=TF                   \
-    --host-ip=sl-$SLNUM                \
     --sn-ip=sn-$SNNUM                   \
-    --data-dir="$SPLIT_DIR/$SLNUM"  \
+    --data-dir="$DATA_DIR"  \
     --model-dir="$SPLIT_DIR/$SLNUM"  \
-    --model-program=densenet.py        \
+    --model-program=train.py        \
     --apls-ip apls                 \
     --gpu=$GPU                        \
     -serverAddress spire-server            \
@@ -14,4 +14,5 @@ docker container rm sl-$SLNUM ; bash ./swarm-learning/bin/run-sl        \
     -e SLNUM=$SLNUM  \
     -e SNNUM=$SNNUM  \
     -e WEIGHTAGE=$WEIGHTAGE \
-    -e TF_FORCE_GPU_ALLOW_GROWTH=true
+    -e TF_FORCE_GPU_ALLOW_GROWTH=true   \
+    --host-ip=sl-$SLNUM
