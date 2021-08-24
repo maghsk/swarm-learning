@@ -1,7 +1,12 @@
 #!/bin/bash
-echo 'export SPLIT_DIR=/home/ubuntu/SwarmSense/NIHCHEST/SplitResult-patient-1-1-1'
-echo 'export DATA_DIR=/home/ubuntu/SwarmSense/NIHCHEST'
-echo "export SNNUM=1"
+# SLNUM WEIGHTAGE SPLIT_DIR DATA_DIR SNNUM(optional)
+# Example:
+# eval `./ido/gen_env.sh 1 50 /home/ubuntu/SwarmSense/NIHCHEST/SplitResult-patient-1-2-3 /home/ubuntu/SwarmSense/NIHCHEST`
+# eval `./ido/gen_env.sh 1 50 /home/ubuntu/SwarmSense/NIHCHEST/SplitResult-patient-1-2-3 /home/ubuntu/SwarmSense/NIHCHEST 2`
+
 echo "export SLNUM=$1"
 echo "export GPU=$1"
-echo 'export WEIGHTAGE=50'
+echo "export WEIGHTAGE=$2"
+echo "export SPLIT_DIR=$3"
+echo "export DATA_DIR=$4"
+echo "export SNNUM=${5:-1}"
