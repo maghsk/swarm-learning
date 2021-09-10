@@ -1,8 +1,8 @@
 #!/bin/bash
 # SLNUM WEIGHTAGE SPLIT_DIR DATA_DIR SNNUM(optional)
 # Example:
-# eval `./ido/gen_env.sh 1 50 /home/ubuntu/SwarmSense/NIHCHEST/SplitResult-patient-1-2-3 /home/ubuntu/SwarmSense/NIHCHEST`
-# eval `./ido/gen_env.sh 1 50 /home/ubuntu/SwarmSense/NIHCHEST/SplitResult-patient-1-2-3 /home/ubuntu/SwarmSense/NIHCHEST 2`
+# eval `./ido/gen_env.sh 1 50 /home/ubuntu/SwarmSense/NIHCHEST/SplitResult-age /home/ubuntu/SwarmSense/NIHCHEST`
+# eval `./ido/gen_env.sh 1 50 /home/ubuntu/SwarmSense/NIHCHEST/SplitResult-age /home/ubuntu/SwarmSense/NIHCHEST 2`
 
 echo "export SLNUM=$1"
 echo "export GPU=$1"
