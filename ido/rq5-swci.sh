@@ -1,0 +1,1 @@
+./swarm-learning/bin/run-swci --name swci --spire-docker-name spire-server --network sl-net -serverAddress spire-server -genJoinToken
